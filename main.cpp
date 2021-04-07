@@ -1,3 +1,4 @@
+#include <cstring>
 #include "stdafx.h"
 #include "geodesic_mesh.h"
 #include "geodesic_algorithm_exact.h" 
@@ -25,7 +26,7 @@ int main(int argc, char **argv)
 	{
 		if (strcmp(argv[i], "-m") == 0)
 		{
-			strcpy_s(file_name, argv[i+1]); i+=2;
+			strcpy(file_name, argv[i+1]); i+=2;
 		}
 		else if (strcmp(argv[i], "-s") == 0)
 		{
@@ -37,7 +38,7 @@ int main(int argc, char **argv)
 		}
 		else if (strcmp(argv[i], "-o") == 0)
 		{
-			strcpy_s(outputMesh, argv[i+1]); i+=2;
+			strcpy(outputMesh, argv[i+1]); i+=2;
 		}
 		else ++i;
 	}
